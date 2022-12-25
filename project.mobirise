@@ -37,8 +37,14 @@
     },
     "path": "@PROJECT_PATH@",
     "versionFirst": "5.6.11",
-    "siteFonts": [],
-    "uniqCompNum": 7,
+    "siteFonts": [
+      {
+        "css": "'Jost', sans-serif",
+        "name": "Jost",
+        "url": "https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i"
+      }
+    ],
+    "uniqCompNum": 8,
     "versionPublish": "5.6.11"
   },
   "pages": {
@@ -53,97 +59,218 @@
       },
       "components": [
         {
-          "_name": "list03",
-          "_sourceTheme": "softwarem4",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"list3\" group=\"List\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\" plugins=\"mbr-switch-arrow, mobirise-icons2\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <select title=\"Amount\" name=\"cardAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\" selected>5</option>\n            <option value=\"6\">6</option>\n        </select>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/softwarem4/components/_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#f9f9f9\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.9\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-12 col-lg-8 m-auto\">\n                <div class=\"content\">\n                    <div class=\"mbr-section-head align-left mb-5\" mbr-if=\"showTitle || showSubtitle\">\n                        <h4 class=\"mbr-section-subtitle mb-2 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\"><b>FAQ</b></h4>\n                        <h3 class=\"mbr-section-title mb-2 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\"><b>Häufig gestellte Fragen</b></h3>\n                    </div>\n                    <div id=\"bootstrap-accordion\" class=\"panel-group accordionStyles accordion\" role=\"tablist\" aria-multiselectable=\"true\">\n                        <div class=\"card mb-3\">\n                            <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                                <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse1\" aria-expanded=\"false\" aria-controls=\"collapse1\">\n\n                                    <h6 class=\"panel-title-edit mbr-semibold mbr-fonts-style mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-title-edit, .mbr-iconfont\">Wann erhalte ich mein Zertifikat / Ergebnisbogen?</h6>\n                                    <span class=\"sign mbr-iconfont mobi-mbri-plus\"></span>\n                                </a>\n                            </div>\n                            <div id=\"collapse1\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                                <div class=\"panel-body\">\n                                    <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-4\" data-app-selector=\".panel-text\">Für die Auswertung der Prüfungsunterlagen und Erstellung und Zusendung der Zertifikate / Ergebnisbögen an uns, benötigt das telc GmbH in der Regel 4-8 Wochen. Sie erhalten von uns eine E-Mail oder Anruf, sobald die Ergebnisse vorliegen. Falls Sie Postversand als Option bei der Buchung ausgewählt hatten, leiten wir die Zertifikate / Ergebnisbögen per Post an Sie weiter</p>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"card mb-3\" mbr-if=\"cardAmount > 1\">\n                            <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                                <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse2\" aria-expanded=\"false\" aria-controls=\"collapse2\">\n\n                                    <h6 class=\"panel-title-edit mbr-semibold mbr-fonts-style mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-title-edit\">Was mache ich, wenn ich die Prüfung nicht bestanden habe?</h6>\n                                    <span class=\"sign mbr-iconfont mobi-mbri-plus\"></span>\n                                </a>\n                            </div>\n                            <div id=\"collapse2\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                                <div class=\"panel-body\">\n                                    <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-4\" data-app-selector=\".panel-text\">\n                                        Sie können die Prüfung beliebig oft wiederholen. Ein bestandener Prüfungsteil (schriftlich oder mündlich) kann bei der Wiederholung der Prüfung innerhalb einer begrenzten Zeit angerechnet werden.</p>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"card mb-3\" mbr-if=\"cardAmount > 2\">\n                            <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                                <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse3\" aria-expanded=\"false\" aria-controls=\"collapse3\">\n                                    <h6 class=\"panel-title-edit mbr-semibold mbr-fonts-style mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-title-edit\">Wann und wo kann ich mich zur telc-Prüfung anmelden?</h6>\n                                    <span class=\"sign mbr-iconfont mobi-mbri-plus\"></span>\n                                </a>\n                            </div>\n                            <div id=\"collapse3\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                                <div class=\"panel-body\">\n                                    <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-4\" data-app-selector=\".panel-text\">*direkt online\n<br>*im Büro zu den Öffnungszeiten:Bissenkamp 12-16 44135 Dortmund\n<br>*Mit dem Entrichten der Gebühr ist die Anmeldung zur telc-Prüfung verbindlich.</p>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"card mb-3\" mbr-if=\"cardAmount > 3\">\n                            <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                                <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse4\" aria-expanded=\"false\" aria-controls=\"collapse4\">\n                                    <h6 class=\"panel-title-edit mbr-semibold mbr-fonts-style mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-title-edit\">Kann jemand anderes mein Zertifikat abholen?</h6>\n                                    <span class=\"sign mbr-iconfont mobi-mbri-plus\"></span>\n                                </a>\n                            </div>\n                            <div id=\"collapse4\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                                <div class=\"panel-body\">\n                                    <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-4\" data-app-selector=\".panel-text\">\n                                        Mit einer unterschriebenen Vollmacht und mit einer Kopie Ihres Personalausweises können Sie das Zertifikat auch von einer Person Ihres Vertrauens abholen lassen. Die Person muss auch einen Ausweis dabeihaben.</p>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"card mb-3\" mbr-if=\"cardAmount > 4\">\n                            <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                                <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse5\" aria-expanded=\"false\" aria-controls=\"collapse5\">\n                                    <h6 class=\"panel-title-edit mbr-semibold mbr-fonts-style mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-title-edit\">Hier geht es zu den allgemeinen Geschäftsbedingungen und zur Prüfungsordnung von telc?</h6>\n                                    <span class=\"sign mbr-iconfont mobi-mbri-plus\"></span>\n                                </a>\n                            </div>\n                            <div id=\"collapse5\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                                <div class=\"panel-body\">\n                                    <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-4\" data-app-selector=\".panel-text\"><a href=\"https://www.telc.net/fileadmin/user_upload/Informationsmaterial/AGB_DE_09_2021.pdf\">AGB_DE_09_2021</a><br>\n<br>Prüfungsort: Dortmund-Zentrum, Nähe Hauptbahnhof\n<br>Zeit: ca. 08.30 – 16:00\n<br>Tag: Freitag / Samstag\n<br>Anmeldeschluss: 20 Tage vor der Prüfung und solange es freie plätze gibt\n<br>Voraussetzung: gültiger Ausweis / Reisepass mit Foto</p>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"card mb-3\" mbr-if=\"cardAmount > 5\">\n                            <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                                <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse6\" aria-expanded=\"false\" aria-controls=\"collapse6\">\n                                    <h6 class=\"panel-title-edit mbr-semibold mbr-fonts-style mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-title-edit\">Nulla laoreet\n                                        urna purus sed ultricies</h6>\n                                    <span class=\"sign mbr-iconfont mobi-mbri-plus\"></span>\n                                </a>\n                            </div>\n                            <div id=\"collapse6\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                                <div class=\"panel-body\">\n                                    <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-4\" data-app-selector=\".panel-text\">\n                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec purus\n                                        ut massa hendrerit fringilla luctus mattis diam. Integer mollis sollicitudin\n                                        tincidunt.</p>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n        </div>\n    </div>\n</section>",
+          "_name": "accordion01",
+          "_sourceTheme": "carm4",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"accordion1 carm4_accordion1\" group=\"Accordions\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background':bg.parallax, 'mbr-fullscreen': fullScreen}\" plugins=\"mbr-switch-arrow2, mobirise-icons2\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <select title=\"Accordions Count\" name=\"bootstrapAccordion\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\" selected>5</option>\n            <option value=\"6\">6</option>\n        </select>\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showsubTitle\">\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Column title\" name=\"showColumnTitle\">\n        <header condition=\"showTitle\">Mask</header>\n        <input type=\"checkbox\" title=\"Title Mask\" name=\"showTitleMask\" condition=\"showTitle\" checked>\n        <input type=\"color\" title=\"Mask Text Color\" name=\"maskTextColor\" value=\"#ffffff\" selected condition=\"showTitleMask && showTitle\">\n        <input type=\"checkbox\" title=\"Gradient Mask\" name=\"gradientMask\" condition=\"showTitleMask && showTitle\" checked>\n        <input type=\"color\" title=\"Mask Color\" name=\"maskColor\" value=\"#4479d9\" condition=\"showTitleMask && showTitle\">\n        <input type=\"color\" title=\"Mask Color 2\" name=\"maskColor2\" value=\"#4479d9\" condition=\"gradientMask && showTitleMask && showTitle\">\n        <input type=\"color\" title=\"Mask Color 3\" name=\"maskColor3\" value=\"#4479d9\" condition=\"gradientMask && showTitleMask && showTitle\">\n        <header>Color</header>\n        <input type=\"color\" name=\"cardColor\" title=\"Card Bg\" value=\"#f5f5f5\" selected>\n        <input type=\"color\" name=\"iconColor\" title=\"Icons\" value=\"#4479d9\" selected>\n        <input type=\"color\" name=\"lineColor\" title=\"Line\" value=\"#efefef\" selected>\n        <input type=\"color\" name=\"openLineColor\" title=\"Open Line\" value=\"#4479d9\" selected>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@ADDONS_PATH@/carm4/components/_images/background1.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.9\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container-fluid': fullWidth, 'container': !fullWidth }\">\n        <div class=\"row\">\n            <div class=\"col-12 col-md-12 title-text\">\n                <h3 class=\"mbr-section-title mbr-bold align-center mbr-fonts-style\" data-app-selector=\".title-text .mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">Häufig gestellte Fragen</h3>\n                <h4 class=\"mbr-section-subtitle pb-1 align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showsubTitle\" data-app-selector=\".title-text .mbr-section-subtitle\">The\n                    Car\n                    Repair Appointment</h4>\n                <p class=\"mbr-text mbr-regular align-center mbr-fonts-style mt-4\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".title-text .mbr-text\">Lorem ipsum dolor sit amet,\n                    consectetur\n                    adipisicing elit, sed do\n                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru\n                    exercitation ullamco laboris nisi ut aliquip ex lorem ipsum.</p>\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-lg-12\">\n                <div id=\"bootstrap-accordion\" class=\"panel-group accordionStyles accordion\" role=\"tablist\" aria-multiselectable=\"true\">\n                    <div class=\"row\">\n                        <div class=\"col-lg-6\">\n                            <h3 class=\"mbr-section-subtitle align-left mbr-black mbr-regular pb-0 pb-lg-4 mbr-fonts-style second-subtitle\" mbr-if=\"showColumnTitle\" mbr-theme-style=\"display-7\" data-app-selector=\".second-subtitle\">\n                                Personalization options</h3>\n                            <div class=\"card\">\n                                <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                                    <a role=\"button\" class=\"panel-title collapsed text-black pr-3\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse1\" aria-expanded=\"false\" aria-controls=\"collapse1\">\n\n                                        <h4 class=\"mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".card .card-header a.panel-title h4\">Wann erhalte ich mein Zertifikat / Ergebnisbogen?\n                                            <span class=\"toggle-icon inactive sign mbr-iconfont\"></span>\n                                        </h4>\n\n                                    </a>\n                                </div>\n                                <div id=\"collapse1\" class=\"panel-collapse noScroll collapse \" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                                    <div class=\"panel-body\">\n                                        <p class=\"mbr-fonts-style panel-text pr-2\" mbr-theme-style=\"display-7\" data-app-selector=\".card .panel-body p\">\n                                            Für die Auswertung der Prüfungsunterlagen und Erstellung und Zusendung der Zertifikate / Ergebnisbögen an uns, benötigt das telc GmbH in der Regel 4-8 Wochen. Sie erhalten von uns eine E-Mail oder Anruf, sobald die Ergebnisse vorliegen. Falls Sie Postversand als Option bei der Buchung ausgewählt hatten, leiten wir die Zertifikate / Ergebnisbögen per Post an Sie weiter</p>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"card\" mbr-if=\"bootstrapAccordion > 1\">\n                                <div class=\"card-header\" role=\"tab\" id=\"headingTwo\">\n                                    <a role=\"button\" class=\"collapsed panel-title text-black pr-3\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse2\" aria-expanded=\"false\" aria-controls=\"collapse2\">\n                                        <h4 class=\" mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".card .card-header a.panel-title h4\"><span class=\"toggle-icon inactive sign mbr-iconfont\"></span>Was mache ich, wenn ich die Prüfung nicht bestanden habe?\n                                        </h4>\n                                    </a>\n\n                                </div>\n                                <div id=\"collapse2\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingTwo\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                                    <div class=\"panel-body\">\n                                        <p class=\"mbr-fonts-style panel-text pr-2\" mbr-theme-style=\"display-7\" data-app-selector=\".card .panel-body pt\">\n                                            Sie können die Prüfung beliebig oft wiederholen. Ein bestandener Prüfungsteil (schriftlich oder mündlich) kann bei der Wiederholung der Prüfung innerhalb einer begrenzten Zeit angerechnet werden.</p>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"card\" mbr-if=\"bootstrapAccordion > 2\">\n                                <div class=\"card-header\" role=\"tab\" id=\"headingThree\">\n                                    <a role=\"button\" class=\"collapsed text-black panel-title pr-3\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse3\" aria-expanded=\"false\" aria-controls=\"collapse3\">\n                                        <h4 class=\" mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".card .card-header a.panel-title h4\"><span class=\"toggle-icon inactive sign mbr-iconfont\"></span>Wann und wo kann ich mich zur telc-Prüfung anmelden?</h4>\n                                    </a>\n                                </div>\n                                <div id=\"collapse3\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingThree\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                                    <div class=\"panel-body\">\n                                        <p class=\"mbr-fonts-style panel-text pr-2\" mbr-theme-style=\"display-7\" data-app-selector=\".card .panel-body p\">\n                                            *direkt online\n<br>*im Büro zu den Öffnungszeiten:Bissenkamp 12-16 44135 Dortmund\n<br>*Mit dem Entrichten der Gebühr ist die Anmeldung zur telc-Prüfung verbindlich.</p>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"card\" mbr-if=\"bootstrapAccordion > 3\">\n                                <div class=\"card-header\" role=\"tab\" id=\"headingFour\">\n                                    <a role=\"button\" class=\"collapsed panel-title text-black pr-3\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse4\" aria-expanded=\"false\" aria-controls=\"collapse4\">\n                                        <h4 class=\" mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".card .card-header a.panel-title h4\"><span class=\"toggle-icon inactive sign mbr-iconfont\"></span>Kann jemand anderes mein Zertifikat abholen?\n                                        </h4>\n                                    </a>\n                                </div>\n                                <div id=\"collapse4\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingFour\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                                    <div class=\"panel-body\">\n                                        <p class=\"mbr-fonts-style panel-text pr-2\" mbr-theme-style=\"display-7\" data-app-selector=\".card .panel-body p\">\n                                            Mit einer unterschriebenen Vollmacht und mit einer Kopie Ihres Personalausweises können Sie das Zertifikat auch von einer Person Ihres Vertrauens abholen lassen. Die Person muss auch einen Ausweis dabeihaben.\n                                        </p>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"card\" mbr-if=\"bootstrapAccordion > 4\">\n                                <div class=\"card-header\" role=\"tab\" id=\"headingFive\">\n                                    <a role=\"button\" class=\"collapsed panel-title text-black pr-3\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse5\" aria-expanded=\"false\" aria-controls=\"collapse5\">\n                                        <h4 class=\" mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".card .card-header a.panel-title h4\"><span class=\"toggle-icon inactive sign mbr-iconfont\"></span>Hier geht es zu den allgemeinen Geschäftsbedingungen und zur Prüfungsordnung von telc?</h4>\n                                    </a>\n                                </div>\n                                <div id=\"collapse5\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingFive\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                                    <div class=\"panel-body\">\n                                        <p class=\"mbr-fonts-style panel-text pr-2\" mbr-theme-style=\"display-7\" data-app-selector=\".card .panel-body p\">\n                                            <a href=\"https://www.telc.net/fileadmin/user_upload/Informationsmaterial/AGB_DE_09_2021.pdf\">AGB_DE_09_2021</a><br>\n                                            Prüfungsort: Dortmund-Zentrum, Nähe Hauptbahnhof\n<br>Zeit: ca. 08.30 – 16:00\n<br>Tag: Freitag / Samstag\n<br>Anmeldeschluss: 20 Tage vor der Prüfung und solange es freie plätze gibt\n<br>Voraussetzung: gültiger Ausweis / Reisepass mit Foto</p>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"card\" mbr-if=\"bootstrapAccordion > 5\">\n                                <div class=\"card-header\" role=\"tab\" id=\"headingSix\">\n                                    <a role=\"button\" class=\"collapsed panel-title text-black pr-3\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse6\" aria-expanded=\"false\" aria-controls=\"collapse6\">\n                                        <h4 class=\" mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".card .card-header a.panel-title h4\"><span class=\"toggle-icon inactive sign mbr-iconfont\"></span>\n                                            Lacinia quis vel eros donec ac odio tempor orci\n                                        </h4>\n                                    </a>\n                                </div>\n                                <div id=\"collapse6\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingSix\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                                    <div class=\"panel-body\">\n                                        <p class=\"mbr-fonts-style panel-text pr-2\" mbr-theme-style=\"display-4\" data-app-selector=\".card .panel-body pt\">\n                                            Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Egestas\n                                            congue quisque egestas diam in arcu cursus euismod.\n                                        </p>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"col-lg-6\">\n                            <h3 class=\"mbr-section-subtitle align-left mbr-black mbr-regular pb-0 pb-lg-4 mbr-fonts-style second-subtitle\" mbr-if=\"showColumnTitle\" mbr-theme-style=\"display-7\" data-app-selector=\".second-subtitle\">Social\n                                media integration</h3>\n                            <div class=\"card\">\n                                <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                                    <a role=\"button\" class=\"panel-title collapsed text-black pr-3\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse7\" aria-expanded=\"false\" aria-controls=\"collapse7\">\n                                        <h4 class=\" mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".card .card-header a.panel-title h4\"><span class=\"toggle-icon inactive sign mbr-iconfont\"></span>Lorem Ipsum</h4>\n                                    </a>\n                                </div>\n                                <div id=\"collapse7\" class=\"panel-collapse noScroll collapse \" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                                    <div class=\"panel-body\">\n                                        <p class=\"mbr-fonts-style panel-text pr-2\" mbr-theme-style=\"display-7\" data-app-selector=\".card .panel-body p\"><br>Lorem Ipsum&nbsp;<br></p>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"card\" mbr-if=\"bootstrapAccordion > 1\">\n                                <div class=\"card-header\" role=\"tab\" id=\"headingTwo\">\n                                    <a role=\"button\" class=\"collapsed panel-title text-black pr-3\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse8\" aria-expanded=\"false\" aria-controls=\"collapse8\">\n                                        <h4 class=\" mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".card .card-header a.panel-title h4\"><span class=\"toggle-icon inactive sign mbr-iconfont\"></span>Lorem Ipsum</h4>\n                                    </a>\n\n                                </div>\n                                <div id=\"collapse8\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingTwo\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                                    <div class=\"panel-body\">\n                                        <p class=\"mbr-fonts-style panel-text pr-2\" mbr-theme-style=\"display-7\" data-app-selector=\".card .panel-body p\">\n                                            Lorem Ipsum</p>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"card\" mbr-if=\"bootstrapAccordion > 2\">\n                                <div class=\"card-header\" role=\"tab\" id=\"headingThree\">\n                                    <a role=\"button\" class=\"collapsed text-black panel-title pr-3\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse9\" aria-expanded=\"false\" aria-controls=\"collapse9\">\n                                        <h4 class=\" mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".card .card-header a.panel-title h4\"><span class=\"toggle-icon inactive sign mbr-iconfont\"></span><div><span style=\"font-size: 2rem; background-color: transparent;\">Lorem Ipsum</span><br></div></h4>\n                                    </a>\n                                </div>\n                                <div id=\"collapse9\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingThree\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                                    <div class=\"panel-body\">\n                                        <p class=\"mbr-fonts-style panel-text pr-2\" mbr-theme-style=\"display-7\" data-app-selector=\".card .panel-body p\"><br>Lorem Ipsum&nbsp;<br></p>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"card\" mbr-if=\"bootstrapAccordion > 3\">\n                                <div class=\"card-header\" role=\"tab\" id=\"headingFour\">\n                                    <a role=\"button\" class=\"collapsed panel-title text-black pr-3\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse10\" aria-expanded=\"false\" aria-controls=\"collapse10\">\n                                        <h4 class=\" mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".card .card-header a.panel-title h4\"><span class=\"toggle-icon inactive sign mbr-iconfont\"></span>Lorem Ipsum</h4>\n                                    </a>\n                                </div>\n                                <div id=\"collapse10\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingFour\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                                    <div class=\"panel-body\">\n                                        <p class=\"mbr-fonts-style panel-text pr-2\" mbr-theme-style=\"display-4\" data-app-selector=\".card .panel-body p\">\n                                            Lorem Ipsum\n                                        </p>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"card\" mbr-if=\"bootstrapAccordion > 4\">\n                                <div class=\"card-header\" role=\"tab\" id=\"headingFive\">\n                                    <a role=\"button\" class=\"collapsed panel-title text-black pr-3\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse11\" aria-expanded=\"false\" aria-controls=\"collapse11\">\n                                        <h4 class=\" mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".card .card-header a.panel-title h4\"><span class=\"toggle-icon inactive sign mbr-iconfont\"></span>Lorem Ipsum</h4>\n                                    </a>\n                                </div>\n                                <div id=\"collapse11\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingFive\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                                    <div class=\"panel-body\">\n                                        <p class=\"mbr-fonts-style panel-text pr-2\" mbr-theme-style=\"display-4\" data-app-selector=\".card .panel-body p\">\n                                            Lorem Ipsum</p>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"card\" mbr-if=\"bootstrapAccordion > 5\">\n                                <div class=\"card-header\" role=\"tab\" id=\"headingSix\">\n                                    <a role=\"button\" class=\"collapsed panel-title text-black pr-3\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse12\" aria-expanded=\"false\" aria-controls=\"collapse12\">\n                                        <h4 class=\" mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".card .card-header a.panel-title h4\"><span class=\"toggle-icon inactive sign mbr-iconfont\"></span>\n                                            Non blandit massa enim nec dui nunc mattis\n                                        </h4>\n                                    </a>\n                                </div>\n                                <div id=\"collapse12\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingSix\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                                    <div class=\"panel-body\">\n                                        <p class=\"mbr-fonts-style panel-text pr-2\" mbr-theme-style=\"display-4\" data-app-selector=\".card .panel-body p\">\n                                            Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Egestas\n                                            congue quisque egestas diam in arcu cursus euismod.</p>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = 'color')": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "position": "relative",
+            "& when (@bg-type = \"color\")": {
               "background-color": "@bg-value"
             },
-            "& when (@bg-type = 'image')": {
+            "& when (@bg-type = \"image\")": {
               "background-image": "url(@bg-value)"
             },
+            ".mbr-section-title": {
+              "color": "#06182d",
+              "& when (@showTitleMask)": {
+                "span": {
+                  "line-height": "1",
+                  "color": "@maskTextColor",
+                  "padding": "0 6px 1px 5px",
+                  "transform": "skew(-14deg)",
+                  "background": "@maskColor",
+                  "& when (@gradientMask)": {
+                    "background": "linear-gradient(@maskColor 0%, @maskColor2 69%, @maskColor3 100%)"
+                  },
+                  "display": "inline-block",
+                  "font-weight": "500",
+                  "letter-spacing": "0",
+                  "position": "relative"
+                }
+              }
+            },
+            ".mbr-section-subtitle": {
+              "color": "#06182d",
+              "&.display-7": {
+                "letter-spacing": "0"
+              }
+            },
+            ".mbr-text": {
+              "color": "@infoColor",
+              "font-weight": "300"
+            },
+            ".title-text": {
+              ".mbr-section-subtitle": {
+                "color": "#06182d",
+                "&.mbr-light": {
+                  "font-weight": "300"
+                }
+              },
+              ".mbr-section-subtitle.display-4": {
+                "font-size": "13px",
+                "line-height": "1.85",
+                "letter-spacing": "2px"
+              },
+              ".mbr-section-title": {
+                "color": "@secondaryColor",
+                "&.mbr-bold": {
+                  "font-weight": "700"
+                },
+                "span": {
+                  "font-weight": "500"
+                }
+              },
+              ".mbr-section-title.display-2": {
+                "line-height": "1.2",
+                "letter-spacing": "-0.5px"
+              },
+              "margin-bottom": "70px"
+            },
             ".mbr-iconfont": {
-              "font-size": "1.2rem !important",
-              "font-family": "'Moririse2' !important",
-              "color": "currentColor",
+              "font-family": "\"Moririse2\" !important",
+              "display": "inline-flex",
+              "transform-origin": "",
+              "transform": "rotate(45deg)",
               "transition": "all 0.3s",
-              "transform": "rotate(90deg)"
-            },
-            ".panel-group": {
-              "border": "none"
-            },
-            ".card-header": {
-              "padding": "1.2rem 0.5rem",
-              "@media (max-width: 767px)": {
-                "padding": "1rem 0rem"
+              "font-size": "1.4rem !important",
+              "color": "@iconColor",
+              "&:before": {
+                "transform": "scaleY(0) !important",
+                "transition": "all 0.4s"
               }
             },
-            ".panel-body": {
-              "padding": "0 0.5rem",
-              "padding-bottom": "1rem",
-              "@media (max-width: 767px)": {
-                "padding": "0rem",
-                "padding-bottom": "1rem"
-              }
+            ".p-4": {
+              "padding": "1rem 0 !important"
             },
-            ".content": {
-              "margin": "5rem auto"
+            ".accordion .card .card-header": {
+              "margin-bottom": "0px"
             },
-            ".img-col": {
-              "padding": "0"
+            ".mbri-arrow-down:before": {
+              "content": "\"\\e960\""
             },
-            ".img-item": {
-              "height": "100%"
-            },
-            "img": {
-              "height": "100%",
-              "object-fit": "cover"
+            ".mbri-arrow-up:before": {
+              "content": "\"\\e960\""
             },
             ".collapsed": {
-              "span": {
-                "transform": "rotate(0deg)"
+              ".mbr-iconfont": {
+                "transform": "rotate(0deg)",
+                "&:before": {
+                  "transform": "scaleY(1) !important",
+                  "transition": "all 0.3s"
+                }
               }
             },
-            ".panel-title": {
-              "display": "flex",
-              "align-items": "center",
-              "justify-content": "space-between"
-            },
-            "p": {
-              "margin-bottom": "0.3rem"
-            },
-            ".mbri-arrow-up": {
-              "transform": "rotate(45deg)"
-            },
-            ".panel-title-edit": {
-              "color": "#000000"
-            },
-            ".card .card-header": {
-              "background-color": "transparent",
-              "margin-bottom": "0",
-              "border": "0",
-              "border-radius": "10px"
-            },
             ".card": {
-              "background": "white",
-              "padding": "0rem 1rem",
-              "border-radius": "10px!important"
+              "border-radius": "0px",
+              "background-color": "@cardColor",
+              "padding-left": "30px",
+              "padding-right": "30px",
+              "padding-top": "1.2rem",
+              "&:hover": {
+                ".card-header": {
+                  "transition": "all 0.15s linear 0s",
+                  "opacity": "0.7"
+                }
+              },
+              ".card-header": {
+                "border-radius": "0px",
+                "background-color": "transparent",
+                "padding": "0",
+                "h4": {
+                  "justify-content": "flex-start",
+                  "width": "100%"
+                },
+                "a.panel-title": {
+                  "margin-bottom": "0",
+                  "display": "flex",
+                  "width": "100%",
+                  "border-bottom": "2px solid @openLineColor",
+                  "transition": "all 0.3s",
+                  "&.collapsed": {
+                    "border-bottom": "1px solid @lineColor"
+                  },
+                  "justify-content": "space-between",
+                  "&:focus": {
+                    "text-decoration": "none !important"
+                  },
+                  "h4": {
+                    "padding": "0 0rem 1.2rem",
+                    "margin-bottom": "0",
+                    "font-weight": "400",
+                    "line-height": "1.5",
+                    "letter-spacing": "-0.5px",
+                    "color": "#28303f",
+                    ".sign": {
+                      "line-height": "1.6 !important"
+                    }
+                  },
+                  ".toggle-icon": {
+                    "right": "14px",
+                    "position": "absolute",
+                    "top": "20px",
+                    "transform": "none",
+                    "display": "inline-block",
+                    "height": "2px",
+                    "margin-left": "0",
+                    "width": "12px",
+                    "border-radius": "50%",
+                    "border": "2px solid rgba(97, 114, 138, 0.4)",
+                    "padding": "13px",
+                    "&:before, &:after": {
+                      "background": "currentColor",
+                      "border": "0",
+                      "box-sizing": "border-box",
+                      "content": "\"\"",
+                      "display": "block",
+                      "left": "50%",
+                      "position": "absolute",
+                      "top": "50%"
+                    },
+                    "&:before": {
+                      "height": "12px",
+                      "margin-left": "-1px !important",
+                      "width": "2px",
+                      "margin-top": "-6px",
+                      "background-color": "currentColor",
+                      "border": "0",
+                      "transform": "none"
+                    },
+                    "&:after": {
+                      "height": "2px",
+                      "width": "12px",
+                      "margin-left": "-6px",
+                      "margin-top": "-1px"
+                    }
+                  }
+                }
+              },
+              ".panel-body": {
+                "padding": "14px 20px",
+                "p": {
+                  "color": "@infoColor",
+                  "line-height": "1.5"
+                },
+                ".display-4": {
+                  "font-size": "16px"
+                }
+              }
             },
-            ".panel-title-edit, .mbr-iconfont": {
-              "color": "#1b2026"
-            },
-            ".panel-text": {
+            ".title-text .mbr-section-title": {
               "color": "#000000"
             },
-            "H4": {
-              "color": "#777777"
+            ".card .card-header a.panel-title h4": {
+              "color": "#000000"
+            },
+            ".card .panel-body p": {
+              "color": "#000000"
             }
           },
-          "_cid": "tqWgZBhMRG",
-          "_anchor": "list03-6",
+          "_cid": "tqYSMbqKIF",
+          "_anchor": "accordion01-7",
           "_PHPplaceholders": [],
           "_JSplaceholders": [],
           "_protectedParams": [],
